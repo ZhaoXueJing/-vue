@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>08_条件渲染</title>
+</head>
+<body>
+<!--
+1. 条件渲染指令
+  v-if
+  v-else (移除元素)
+  v-show
+2. 比较v-if与v-show (隐藏元素(display:none;)，内存中的元素还在)
+  如果需要频繁切换 v-show 较好
+-->
+
+<div id="demo">
+  <p v-if="ok">表白成功</p>
+  <!--只写属性名，相当于属性值为true-->
+  <p v-else>表白失败</p>
+  <button @click="ok = !ok">切换</button>
+
+  <hr>
+  <p v-show="ok">求婚成功</p>
+  <p v-show="!ok">求婚失败</p>
+
+  <button @click="ok=!ok">切换</button>
+</div>
+
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+  new Vue({
+    el: '#demo',
+    data: {
+      ok: !0,
+    }
+  })
+</script>
+</body>
+</html>

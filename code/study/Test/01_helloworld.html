@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+    <!--模板-->
+    <div id="test">
+      <!--element.value = 'xxx'-->
+      <input type="text" v-model="msg"><br><!--指令-->
+      <!--element.textContent = 'xxx'-->
+      <input type="text" v-model="msg"><!--指令-->
+      <p>hello {{msg}}</p><!--大括号表达式-->
+    </div>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <script type="text/javascript">
+    const vm = new Vue({
+      el: '#test',
+      data: {
+        msg: 'hello vue'
+      },
+      methods: {
+
+      }
+    })
+    </script>
+</body>
+</html>
